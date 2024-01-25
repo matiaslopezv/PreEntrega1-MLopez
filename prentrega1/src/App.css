@@ -1,0 +1,22 @@
+#carrito{
+    max-width: 45px;
+}
+
+.cartWidget{
+    display: flex;
+    font-size: 1.5rem;
+    gap: 15px;
+}
+
+.containerStyle {
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-Radius: 8px;
+    text-Align: center;
+  }
+
+.greetingStyle {
+    color: blue;
+    font-size: 24px;
+  }
+   
