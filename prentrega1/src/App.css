@@ -9,7 +9,7 @@
 }
 
 .containerStyle {
-    padding: 20px;
+    padding: 25px;
     border: 1px solid #ccc;
     border-Radius: 8px;
     text-Align: center;
@@ -19,4 +19,6 @@
     color: blue;
     font-size: 24px;
   }
+
+  
    

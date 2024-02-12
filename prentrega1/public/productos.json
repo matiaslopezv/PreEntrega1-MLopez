@@ -1,0 +1,47 @@
+[
+    {
+        "id": 1,
+        "nombre": "Mountain Bike",
+        "img": "/public/img/Mountain-Bike.png",
+        "precio": 500,
+        "stock": 3,
+        "description": "Para la montaña",
+        "categoria": "Bicicletas"
+    },
+    {
+        "id": 2,
+        "nombre": "Rutera",
+         "img": "/public/img/rutera.png",
+        "precio": 1400,
+        "stock": 5,
+        "description": "La mas rapida",
+        "categoria": "Bicicletas"
+    },
+    {
+        "id": 3,
+        "nombre": "Urbana",
+         "img": "/public/img/hibrida.png",
+        "precio": 400,
+        "stock": 4,
+        "description": "Para la ciudad",
+        "categoria": "Bicicletas"
+    },
+    {
+        "id": 4,
+        "nombre": "Camara 700c",
+        "img": "/public/img/camara700.jpg",
+        "precio": 25,
+        "stock": 15,
+        "description": "Respuesto de camara aro 700",
+        "categoria": "Repuestos"
+    },
+    {
+        "id": 5,
+        "nombre": "Camara aro 29",
+        "img": "/public/img/camara29.webp",
+        "precio": 25,
+        "stock": 15,
+        "description": "Respuesto de camara aro 29",
+        "categoria": "Repuestos"
+    }
+]
