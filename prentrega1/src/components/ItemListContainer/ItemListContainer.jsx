@@ -2,6 +2,7 @@ import React from 'react';
 import {useState,useEffect} from 'react'
 import ItemList from '../ItemList/ItemList';
 import {useParams} from 'react-router-dom'
+import './itemListContainer.css'
 
 const ItemListContainer = () => {
 
@@ -34,12 +35,9 @@ const ItemListContainer = () => {
 
 
 return (
-  <div className='itemcontainer'>
+  <div className='contenedor'>
 
-      {productos.length == 0 
-      ? 
-      <h1>CARGANDO..</h1> 
-      : 
+      {
       <ItemList productos={productos}/>
       }
 
