@@ -1,4 +1,10 @@
 .productoEntero{
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    justify-content: center;
+
+}
+
+.articulo{
+    width:500px
 }
