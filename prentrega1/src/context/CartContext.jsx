@@ -5,9 +5,7 @@ export const CartContext = createContext()
 const CartProvider = ({children}) => {
     const[cart,setCart] = useState([])
     const[total, setTotal] = useState(0)
-    // const[totalQuantity,setTotalQuantity] = useState(0)
-    
-    
+        
     const agregarAlCarrito = (producto, cantidad) => {
         const indiceProducto = buscarProductoEnCarrito(producto.id);
         if (indiceProducto === -1) {

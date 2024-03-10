@@ -27,7 +27,7 @@ const ItemDetail = ({producto}) => {
                 <h4 className="card-text">{producto.stock}</h4>
                 <p className="card-text">{producto.descripcion}</p>
               </div>
-              {producto.stock == 0 ? <h2>PRODUCTO SIN STOCK</h2> : (
+              {producto.stock == 0 ? <h2>PRODUCTO FUERA DE STOCK</h2> : (
                 cart ? <Link to={'/cart'}>Ir a tu carrito</Link> : <Contador inicial={1} stock={producto.stock} aumentar={aumentar}/>
             )}
             </div>

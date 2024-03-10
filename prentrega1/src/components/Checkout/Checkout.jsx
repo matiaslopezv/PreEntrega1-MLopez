@@ -28,7 +28,7 @@ const Checkout = () => {
       return;
     }
 
-    const db = getFirestore();
+    
 
     const orden = {
       items: cart.map(producto => ({
