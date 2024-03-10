@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link, NavLink } from 'react-router-dom'
 import CartWidget from '../Cartwidget/CartWidget';
-
+import './icono.css'
 const NavBar = () => {
     
   return (
@@ -9,7 +9,7 @@ const NavBar = () => {
     <nav className="navbar navbar-expand-lg bg-body-tertiary">
   <div className="container-fluid">
       <Link to={'/'}>
-       <a className="navbar-brand" href="#">BIKE_GARAGE</a>
+      <img className='iconito' src="../../public/img/bicycle.svg" alt="icono" />
       </Link>
     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span className="navbar-toggler-icon"></span>

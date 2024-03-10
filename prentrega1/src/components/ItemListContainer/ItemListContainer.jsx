@@ -1,50 +1,45 @@
-import React from 'react';
 import {useState,useEffect} from 'react'
 import ItemList from '../ItemList/ItemList';
-import {useParams} from 'react-router-dom'
-import './itemListContainer.css'
+import '../ItemList/itemList.css'
+import { useParams } from 'react-router-dom';
+import { db } from '../../firebase/config'
+import { collection,getDocs,getFirestore,query,where } from 'firebase/firestore';
+
 
 const ItemListContainer = () => {
 
-  const [productos,setProductos] = useState([]);
+    const [productos,setProductos] = useState([]);
 
-  const {categoryId} = useParams()
+    const {categoryId} = useParams()
 
-  useEffect(()=>{
-      
-      const fetchData = async () => {
-          try {
-              const response = await fetch("/productos.json");
-              const data = await response.json()
+    useEffect(()=>{
+       const misProductos = 
+       categoryId ? 
+       query(collection(db,"item"),where("categoria","==",categoryId))
+       :
+       collection(db,"item")
 
-              if(categoryId){
-                  const filteredProducts = data.filter((p) => p.categoria == categoryId)
-                  setProductos(filteredProducts)
-              }else{
-                  setProductos(data)
-              }
+       getDocs(misProductos)
+       .then((res) => {
+         const nuevosProductos = res.docs.map((doc) => {
+            const data = doc.data()
+            return {id: doc.id,...data}
+         })
+         setProductos(nuevosProductos)
+       })
+       .catch((error) => console.log(error))
 
-          }catch(error){
-              console.log("Error en el fetch "+error)
-          }
-      }
-
-      fetchData()
-
-  },[categoryId])
+    },[categoryId])
 
 
-return (
-  <div className='contenedor'>
+  return (
+    <div className='itemcontainer'>
 
-      {
-      <ItemList productos={productos}/>
-      }
+        {productos.length == 0 ? (<h1>CARGANDO PRODUCTOS./././</h1>) : (<ItemList productos={productos}/>)}
 
-  </div>
-)
+    </div>
+  )
+
 }
 
-export default ItemListContainer;
-
-
+export default ItemListContainer
